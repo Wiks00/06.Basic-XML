@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://LibraryStorage.Patent/1.0.0.0" elementFormDefault="qualified" targetNamespace="http://LibraryStorage.Patent/1.0.0.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Patent" type="tns:Patent" />
+  <xs:complexType name="Patent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Title" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Inventors" type="tns:ArrayOfString" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="City" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="ApplyingDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="PublicationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pages" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Remark" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="RegistrationNumber" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfString">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" form="unqualified" name="Inventor" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

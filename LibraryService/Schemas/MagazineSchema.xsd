@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://LibraryStorage.Magazine/1.0.0.0" elementFormDefault="qualified" targetNamespace="http://LibraryStorage.Magazine/1.0.0.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Magazine" type="tns:Magazine" />
+  <xs:complexType name="Magazine">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Title" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="PublicationCity" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Publisher" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Edition" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pages" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Remark" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Number" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Date" type="xs:dateTime" />
+    </xs:sequence>
+    <xs:attribute name="ISSN" type="xs:string" use="required"/>
+  </xs:complexType>
+</xs:schema>

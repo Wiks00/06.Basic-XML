@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://LibraryStorage.Catalog/1.0.0.0" elementFormDefault="qualified" targetNamespace="http://LibraryStorage.Catalog/1.0.0.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://LibraryStorage.Book/1.0.0.0" />
+  <xs:import namespace="http://LibraryStorage.Magazine/1.0.0.0" />
+  <xs:import namespace="http://LibraryStorage.Patent/1.0.0.0" />
+  <xs:element name="Catalog" type="tns:Catalog" />
+  <xs:complexType name="Catalog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" xmlns:q1="http://LibraryStorage.Book/1.0.0.0" ref="q1:Book" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" xmlns:q2="http://LibraryStorage.Magazine/1.0.0.0" ref="q2:Magazine" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" xmlns:q3="http://LibraryStorage.Patent/1.0.0.0" ref="q3:Patent" />
+    </xs:sequence>
+    <xs:attribute name="Library" type="xs:string" use="required" />
+    <xs:attribute name="RegistrationDate" type="xs:dateTime" use="required" />
+  </xs:complexType>
+</xs:schema>
